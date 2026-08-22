@@ -8,6 +8,9 @@ The Vite development server runs on port `5173` and calls the backend on port
 VITE_CODESPACE_NAME=your-codespace-name
 ```
 
+Use the value of the `CODESPACE_NAME` environment variable for the current
+Codespace. Do not commit `.env.local`; it is ignored by Git.
+
 When `VITE_CODESPACE_NAME` is unset, the app safely falls back to
 `http://localhost:8000`.
 
