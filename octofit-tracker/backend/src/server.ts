@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express from 'express';
 import { databaseConnection } from './config/database.js';
 import {
@@ -15,6 +16,7 @@ const apiBaseUrl = process.env.CODESPACE_NAME
   : `http://localhost:${port}`;
 
 app.use(express.json());
+app.use(cors());
 
 app.get('/api/health', (_request, response) => {
   response.json({ status: 'ok', apiBaseUrl });
